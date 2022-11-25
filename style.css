@@ -3,14 +3,10 @@ body {
 
 }
 
-header {
-    background-color:#fcf5f5;
-    padding: 20px 0;
-}
 
 .caixa {
     position: relative;
-    width: 950px;
+    width: 100%;
     margin: 0 auto;
 
 
@@ -18,9 +14,55 @@ header {
 
 nav {
     position: absolute;
-    top: 110px;
+    top: 80%;
     right: 0;
+    background: oldlace;
+    border-radius: 20px;
+    padding: 10px;
 
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    height: 50px;
+    border: 10px;
+    margin: 20px;
+}
+
+p {
+    text-align: center;
+    padding: 3px;
+    
+}
+
+#missao {
+    font-size: 20px;
+}
+
+em strong {
+    color: rgb(138, 19, 19);
+
+}
+
+.itens {
+
+    font-style: italic;
+}
+
+.beneficios {
+
+    padding: 20px;
+}
+
+.lista-produtos {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+
+.banner-logo {
+    width: 20%;
 }
 
 nav li {
@@ -33,12 +75,12 @@ nav a {
     text-transform: uppercase;
     color: black;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: brown;
+    color: red;
     text-decoration: underline;
     transition: 1s transform;
     cursor: pointer;
@@ -83,14 +125,69 @@ nav a:hover {
 
 }
 
-#logo {
-    width: 50%;
+.texto-principal {
+    font-size: xx-large;
+    display: block;
+    text-align: center;
 }
 
-#logo:hover {
-    transform: scale(1.5);
-    transition: 1s transform;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.container-galeria{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 300px;
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+.item-galeria{
+    position: relative;
+}
+
+.item-galeria .img-galeria{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item-galeria .title-galeria{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-size: 16pt;
+    font-family: 'Quicksand';
+}
+
+
+
+@media(max-width:768px){
+    .container-galeria{
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows: 50vh;
+    }
+
+}
+
+.item-galeria:hover{
+
+    transform: scale(1.9);
+    transition: 1s transform;
+    z-index: 9999;
+    
+}
+
+.banner {
+    width: 100%;
+}
+
 
 footer {
     text-align: center;
@@ -100,6 +197,9 @@ footer {
 main {
     width: 940px;
     margin: 0 auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
 
 form{
@@ -116,7 +216,7 @@ form label,form legend {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
-    width: 50%;
+    width: 60%;
     border: 2px solid #000000;
     border-radius: 30px;
 
@@ -147,3 +247,43 @@ form textarea:hover {
     font-size: 18px;
     cursor: pointer;
 }
+
+table {
+    margin:20px 0 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    border-radius: 30px;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+
+
